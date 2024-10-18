@@ -1,0 +1,13 @@
+@if (ripple()) {
+  <button name="ripplebtn" class="{{ buttonClass }}">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </button>
+
+} @else if (!ripple()) {
+  <button class="{{ buttonClass }}">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </button>
+}
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>
